@@ -2,7 +2,7 @@
 Stock Sentiment Analysis
 This project aims to perform sentiment analysis on stock market-related text data. By analyzing the sentiment of financial news or social media posts, we can potentially gain insights into market trends and make more informed decisions.
 
-Project Overview
+# Project Overview
 The project involves several key steps:
 
 Data Loading and Initial Exploration: Loading the dataset and understanding its basic structure, checking for missing values, and exploring the distribution of sentiment.
@@ -19,72 +19,14 @@ Model Training: Training the built model on the prepared training data.
 
 Model Performance Assessment: Evaluating the model's performance on unseen test data using various metrics like accuracy, F1-score, precision, recall, and AUC score, along with a confusion matrix visualization.
 
-Setup Instructions
-To set up and run this project, follow these steps:
-
-1. Clone the Repository
-If this project is part of a larger GitHub repository, you would clone it using:
-
-Bash
-
-git clone <repository_url>
-cd <project_directory>
-2. Install Required Libraries
-The project relies on several Python libraries. You can install them using pip:
-
-Bash
-
-pip install wordcloud
-pip install gensim
-pip install nltk
-pip install numpy
-pip install pandas
-pip install seaborn
-pip install tensorflow
-pip install jupyterthemes
-pip install sklearn
-3. Download NLTK Data
-The nltk library requires specific datasets for its functionalities (like stopwords and tokenization). Download them by running the following commands within your Python environment or a Jupyter Notebook cell:
-
-Python
-
-import nltk
-nltk.download("stopwords")
-nltk.download('punkt')
-4. Data
-The dataset used in this project is named stock_sentiment.csv. Ensure this file is placed in a data directory within your project's root folder (e.g., data/stock_sentiment.csv).
-
-5. Running the Jupyter Notebook
-The entire project workflow is encapsulated within a Jupyter Notebook file: 005_Stock_Sentiment_Analysis.ipynb.
-
-To run the notebook:
-
-Start Jupyter Lab or Jupyter Notebook:
-
-Bash
-
-jupyter lab
-# or
-jupyter notebook
-Navigate to the project directory in your Jupyter interface.
-
-Open 005_Stock_Sentiment_Analysis.ipynb.
-
-Run all cells sequentially to execute the data loading, cleaning, model building, training, and evaluation steps.
-
-Project Structure
-.
-├── data/
-│   └── stock_sentiment.csv  # The dataset used in the project
-└── 005_Stock_Sentiment_Analysis.ipynb # Main Jupyter Notebook with all code
-Data Description
+# Data Description
 The stock_sentiment.csv dataset contains two columns:
 
 Text: The raw text content (likely financial news headlines or social media posts).
 
 Sentiment: The associated sentiment, represented as a numerical label (e.g., 1 for positive, 0 for negative).
 
-Key Steps and Code Highlights
+# Key Steps and Code Highlights
 Data Cleaning
 Removing Punctuations: A custom function remove_func is used to strip punctuation from the text.
 
@@ -114,7 +56,7 @@ model.add(Dense(2, activation = 'softmax')): The output layer with 2 neurons (fo
 
 Compilation: The model is compiled with the adam optimizer and binary_crossentropy loss function, suitable for binary classification. Accuracy (acc) is used as a metric.
 
-Results
+# Results
 The model achieved the following performance metrics on the test set:
 
 Training Accuracy: ~94.47%
